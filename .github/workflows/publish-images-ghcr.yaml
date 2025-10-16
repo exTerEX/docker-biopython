@@ -36,7 +36,7 @@ jobs:
       matrix:
         include:
           # Slim type images
-          - python-version: 3.14
+          - python-version: 3
             biopython-version: 1.85
             tag: "latest"
 
@@ -55,10 +55,6 @@ jobs:
           - python-version: 3.11
             biopython-version: 1.82
             tag: "1.82-py3.11-slim"
-
-          - python-version: 3.10
-            biopython-version: 1.81
-            tag: "1.81-py3.10-slim"
 
           # Full type images
           - python-version: 3.14
@@ -80,11 +76,6 @@ jobs:
             biopython-version: 1.82
             target: "full"
             tag: "1.82-py3.11"
-
-          - python-version: 3.10
-            biopython-version: 1.81
-            target: "full"
-            tag: "1.81-py3.10"
 
     permissions:
       contents: read
