@@ -37,7 +37,7 @@ jobs:
       matrix:
         include:
           # Slim type images
-          - python-version: 3
+          - python-version: 3.14
             biopython-version: 1.85
             tag: "latest"
 
@@ -45,9 +45,13 @@ jobs:
             biopython-version: 1.85
             tag: "1.85-py3.14-slim"
 
-          - python-version: 3.13
+          - python-version: 3.14
             biopython-version: 1.84
-            tag: "1.84-py3.13-slim"
+            tag: "1.84-py3.14-slim"
+
+          - python-version: 3.13
+            biopython-version: 1.83
+            tag: "1.83-py3.13-slim"
 
           - python-version: 3.12
             biopython-version: 1.83
@@ -63,10 +67,15 @@ jobs:
             target: "full"
             tag: "1.85-py3.14"
 
-          - python-version: 3.13
+          - python-version: 3.14
             biopython-version: 1.84
             target: "full"
-            tag: "1.84-py3.13"
+            tag: "1.84-py3.14"
+
+          - python-version: 3.13
+            biopython-version: 1.83
+            target: "full"
+            tag: "1.83-py3.13"
 
           - python-version: 3.12
             biopython-version: 1.83
@@ -110,4 +119,3 @@ jobs:
           # FIXME: Automate the username lowercasing
           tags: |
             ${{ env.REGISTRY }}/exterex/biopython:${{ matrix.tag }}
-

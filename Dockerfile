@@ -78,8 +78,7 @@ WORKDIR /app
 # SLIM IMAGE STAGE
 FROM python:${PYTHON_VERSION}-slim
 
-# SET ENVIRONMENT VARIABLES
-ARG PYTHON_VERSION=${PYTHON_VERSION}
+ARG PYTHON_VERSION=$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
 
 # Update pip
 RUN pip install --upgrade pip
