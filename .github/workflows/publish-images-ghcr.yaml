@@ -45,14 +45,6 @@ jobs:
             biopython-version: 1.85
             tag: "1.85-py3.14-slim"
 
-          - python-version: 3.14
-            biopython-version: 1.84
-            tag: "1.84-py3.14-slim"
-
-          - python-version: 3.13
-            biopython-version: 1.83
-            tag: "1.83-py3.13-slim"
-
           - python-version: 3.12
             biopython-version: 1.83
             tag: "1.83-py3.12-slim"
@@ -66,16 +58,6 @@ jobs:
             biopython-version: 1.85
             target: "full"
             tag: "1.85-py3.14"
-
-          - python-version: 3.14
-            biopython-version: 1.84
-            target: "full"
-            tag: "1.84-py3.14"
-
-          - python-version: 3.13
-            biopython-version: 1.83
-            target: "full"
-            tag: "1.83-py3.13"
 
           - python-version: 3.12
             biopython-version: 1.83
