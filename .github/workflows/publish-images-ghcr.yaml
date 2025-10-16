@@ -107,6 +107,7 @@ jobs:
             BIOPYTHON_VERSION=${{ matrix.biopython-version }}
           target: ${{ matrix.target }}
           # TODO: Make dynamic tags later
+          # FIXME: Automate the username lowercasing
           tags: |
-            ${{ env.REGISTRY }}/${{ github.actor.lowercase }}/biopython:${{ matrix.tag }}
+            ${{ env.REGISTRY }}/exterex/biopython:${{ matrix.tag }}
 
