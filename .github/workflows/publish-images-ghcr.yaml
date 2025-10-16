@@ -108,5 +108,5 @@ jobs:
           target: ${{ matrix.target }}
           # TODO: Make dynamic tags later
           tags: |
-            ${{ github.actor }}/biopython:${{ matrix.tag }}
+            ${{ env.REGISTRY }}/${{ github.actor }}/biopython:${{ matrix.tag }}
 
