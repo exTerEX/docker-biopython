@@ -114,5 +114,7 @@ jobs:
             PYTHON_VERSION=${{ matrix.python-version }}
             BIOPYTHON_VERSION=${{ matrix.biopython-version }}
           target: ${{ matrix.target }}
+          # TODO: Make dynamic tags later
           tags: |
-            ${{ github.actor }}/biopython:${{ matrix.tag }} # TODO: Make dynamic later
+            ${{ github.actor }}/biopython:${{ matrix.tag }}
+
