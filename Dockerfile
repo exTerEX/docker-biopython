@@ -90,10 +90,3 @@ COPY --from=slim-builder /usr/local/bin /usr/local/bin
 
 # SETUP AND VERIFICATION COMMAND
 WORKDIR /app
-
-# DEFAULT COMMAND
-CMD ["/bin/bash", "-c", "echo '--- Environment Details ---'; \
-    echo 'Python Version:'; python --version; \
-    echo 'Biopython Version:'; python -c 'import Bio; print(f\"BioPython {Bio.__version__}\")'; \
-    echo '----------------------------'; \
-    /bin/bash"]
